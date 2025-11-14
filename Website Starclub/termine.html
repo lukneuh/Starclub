@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starclub Termine</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Termintabelle spezifisch */
+        .termine-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .termine-section h2 {
+            font-family: 'Bebas Neue', 'Righteous', sans-serif;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .termine-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            color: #fff;
+        }
+
+        .termine-table th,
+        .termine-table td {
+            border: 2px solid rgba(255,215,0,0.8);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .termine-table th {
+            background-color: rgba(255,0,0,0.8); /* dunkles Rot für Header */
+            color: #fff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .termine-table tr:nth-child(even) {
+            background-color: rgba(255,215,0,0.05); /* leichte Streifen */
+        }
+
+        @media (max-width: 768px) {
+            .termine-table th,
+            .termine-table td {
+                padding: 8px 10px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html">
+            <img src="Pictures/StarClub Logo KI.png" alt="StarClub Logo" class="site-logo">
+        </a>
+        <div class="site-tagline">Musik der 50er - 90er Jahre</div>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="termine.html">Termine</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <!-- Termintabelle -->
+        <section class="termine-section">
+            <h2>Unsere kommenden Termine</h2>
+            <table class="termine-table">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Event / Beschreibung</th>
+                        <th>Uhrzeit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>28.11.2025</td>
+                        <td>"Glam Rock" Back to the 70s mit DJ Ulli</td>
+                        <td>20:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>10.01.2026</td>
+                        <td>Rühmann Erben laden zur "Feuerzangenbowle"</td>
+                        <td>18:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>31.01.2026</td>
+                        <td>"Kölsche Nacht" mit DJ Ulli</td>
+                        <td>Uhrzeit folgt!</td>
+                    </tr>
+                    <tr>
+                        <td>28.02.2026</td>
+                        <td>"Ahoi-Sause" mit DJ Yogi</td>
+                        <td>Uhrzeit folgt!</td>
+                    </tr>
+                    <tr>
+                        <td>14.03.2026</td>
+                        <td>Gevelsberger Kneipennacht unter dem Motto "Disco Forever Young" mit DJ Ulli, DJ Micro und DJ Yogi</td>
+                        <td>20:00 Uhr</td>
+                    </tr>
+                    <!-- Weitere Termine hier einfügen -->
+                </tbody>
+            </table>
+        </section>
+
+<!-- Schmale Werbeleiste -->
+<section class="ad-marquee-section">
+    <div class="ad-marquee-container">
+        <a href="https://www.gevelsberg.vit-emotion.de/" target="_blank" rel="noopener noreferrer">
+            <img src="Pictures/vitemotion.png" alt="Vitemotion Website" class="ad-marquee-image">
+        </a>
+        <a href="https://www.instant-av.de/" target="_blank" rel="noopener noreferrer">
+            <img src="Pictures/instantav.png" alt="Instant-AV Website" class="ad-marquee-image">
+        </a>
+        <a href="kontakt.html" target="_blank" rel="noopener noreferrer">
+            <img src="Pictures/ihre Werbung.png" alt="Instant-AV Website" class="ad-marquee-image">
+        </a>
+        <!-- Du kannst hier weitere Bilder hinzufügen -->
+    </div>
+</section>
+    </div>
+    <footer class="site-footer">
+        <nav class="footer-nav" aria-label="Footer Navigation">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
