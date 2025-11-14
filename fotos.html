@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starclub Fotos</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Galerie spezifisch */
+        .gallery-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-section h2 {
+            font-family: 'Bebas Neue', 'Righteous', sans-serif;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 200px; /* gleiche Höhe für alle Bilder */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid img {
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid img {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html">
+            <img src="Pictures/StarClub Logo KI.png" alt="StarClub Logo" class="site-logo">
+        </a>
+        <div class="site-tagline">Musik der 50er - 90er Jahre</div>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="ueber-uns.html">Über uns</a></li>
+                <li><a href="termine.html">Termine</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <!-- Galeriebereich -->
+        <section class="gallery-section">
+            <h2>Unsere schönsten Momente</h2>
+            <div class="gallery-grid">
+    <a href="Pictures/foto 1.jpg" class="gallery-link">
+        <img src="Pictures/foto 1.jpg" alt="Foto 1">
+    </a>
+    <a href="Pictures/foto 2.jpg" class="gallery-link">
+        <img src="Pictures/foto 2.jpg" alt="Foto 2">
+    </a>
+    <a href="Pictures/foto 3.jpg" class="gallery-link">
+        <img src="Pictures/foto 3.jpg" alt="Foto 3">
+    </a>
+    <a href="Pictures/foto 4.jpg" class="gallery-link">
+        <img src="Pictures/foto 4.jpg" alt="Foto 4">
+    </a>
+    <a href="Pictures/foto 5.jpg" class="gallery-link">
+        <img src="Pictures/foto 5.jpg" alt="Foto 5">
+    </a>
+    <a href="Pictures/foto 6.jpg" class="gallery-link">
+        <img src="Pictures/foto 6.jpg" alt="Foto 6">
+    </a>
+    <a href="Pictures/foto 7.jpg" class="gallery-link">
+        <img src="Pictures/foto 7.jpg" alt="Foto 7">
+    </a>
+    <a href="Pictures/foto 8.jpg" class="gallery-link">
+        <img src="Pictures/foto 8.jpg" alt="Foto 8">
+    </a>
+    <a href="Pictures/foto 9.jpg" class="gallery-link">
+        <img src="Pictures/foto 9.jpg" alt="Foto 9">
+    </a>
+    <a href="Pictures/foto 10.jpg" class="gallery-link">
+        <img src="Pictures/foto 10.jpg" alt="Foto 10">
+    </a>
+    <!-- Weitere Bilder -->
+</div>
+        </section>
+
+<!-- Schmale Werbeleiste -->
+<section class="ad-marquee-section">
+    <div class="ad-marquee-container">
+        <a href="https://www.gevelsberg.vit-emotion.de/" target="_blank" rel="noopener noreferrer">
+            <img src="Pictures/vitemotion.png" alt="Vitemotion Website" class="ad-marquee-image">
+        </a>
+        <a href="https://www.instant-av.de/" target="_blank" rel="noopener noreferrer">
+            <img src="Pictures/instantav.png" alt="Instant-AV Website" class="ad-marquee-image">
+        </a>
+        <a href="kontakt.html" target="_blank" rel="noopener noreferrer">
+            <img src="Pictures/ihre Werbung.png" alt="Instant-AV Website" class="ad-marquee-image">
+        </a>
+        <!-- Du kannst hier weitere Bilder hinzufügen -->
+    </div>
+</section>
+    </div>
+    <footer class="site-footer">
+        <nav class="footer-nav" aria-label="Footer Navigation">
+            <ul>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+            </ul>
+        </nav>
+    </footer>
+<div class="lightbox" id="lightbox">
+    <img src="" alt="Großansicht">
+</div>
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const galleryLinks = document.querySelectorAll('.gallery-link');
+
+galleryLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        lightbox.style.display = 'flex';
+        lightboxImg.src = link.href;
+    });
+});
+
+lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+});
+</script>
+</body>
+</html>
